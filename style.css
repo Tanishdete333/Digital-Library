@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: Teko;
+}
+.navbar {
+  /* background: #4f8383; */
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  font-size: 1.3rem;
+  position: sticky;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+#navbar__logo {
+  background-color: white;
+  background-image: linear-gradient(to top, white);
+  background-clip: text ;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;  
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.navbar__items {
+  height: 80px;
+  width: 100%;
+}
+.navbar__items li {
+  display: inline;
+}
+.navbar__links {
+  color: #ecdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: 0;
+  padding: 0 3rem;
+  height: 100%;
+  width: 100%;
+}
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 5px 5px;
+  width: 50%;
+  height: 50%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #ecdbdb;
+  color: black;
+}
+.Login:hover {
+  background-color: rgba(6, 77, 76, 0);
+  transition: all 0.3s ease;
+}
+.navbar__links:hover {
+  color: rgba(9, 63, 60, 0);
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 960px) {
+  .navbar__container {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+
+
+  .navbar__menu.active {
+    background: #161717;
+    opacity: 1;
+    z-index: 1;
+    top: 100%;
+    height: 50vh;
+    transition: all 0.5s ease-in-out;
+  }
+  #navbar__logo {
+    padding: 25px;
+  }
+  .navbar__toggle.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background: white;
+  }
+}
+.enter-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #161717;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from link */
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.1s ease;
+  transition-duration: 2s;
+}
+.main-container {
+  margin: 1%;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(31, 25, 25);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Fantasy;
+}
+.Books {
+  font-size: 25pxpx;
+  text-align: left;
+  color: rgb(238, 231, 231);
+  text-transform: uppercase;
+  font-family: Fantasy;
+}
+.video {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the full container */
+  z-index: -1; /* Places the video behind other content */
+}
+.body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* .button {
+    padding:  50px;
+    font-size: 16px;
+    
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 4%;
+    
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-left: 26%;
+    padding-right: 15%;
+    
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10pxpx;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+     
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #161717;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    text-align: center;
+    display: inline-block;
+
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.alignment{  padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #161717;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+  top: 43%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left:40%;
+    
+    
+
+}
+
+.alignment2{  padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #161717;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+  top: 55%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left:39%;
+    
+    
+
+}
+
+       */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: #161717;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #ecdbdb;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgb(28, 27, 27);
+  width: 80%;
+}
+
+.close {
+  color: rgb(13, 13, 13);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#bookList,
+#publishedBooks {
+  color: #f0f0f0;
+  margin: 20px;
+}
+.Button1 {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #161717;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+.Button1 {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #161717;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 48%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 43%;
+}
+
+.Button2 {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #161717;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+.Button2 {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #161717;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 62%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 42.2%;
+}
+
+.Diamond {
+  display: flex;
+  width: 100vw  ;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* background-color: burlywood; */
+  padding: 0;
+  font-size: 25px;
+  padding-left: 29%;
+  padding-right: 20%;
+  padding-bottom: 10%;
+ padding-top: 2%; 
+  
+  
+ flex-direction:column  ; 
+  
+  
+}
+.login__btn{align-items: center;
+  justify-content: center ;
+  padding-left: 90px;
+  padding-right:90px;
+  ;
+
+}
+.h2__Login{
+  align-items:center;
+  align-self: center;
+  padding-right: 100px;
+  padding-left: -20px;
+
+} 
+   
+.Register{text-align: center;
+  font-size: 61px;
+font-family: Fantasy;
+
+}
+.Wavy{
+  padding-top: 23%;
+  color: #ecdbdb  ;
+  position: relative;
+  font-size: 75px;
+  align-items: center;
+  display: inline-block;
+text-transform: uppercase;
+animation:  animate 1s ease-in-out infinite;
+animation-delay: calc(0.1s * var(--i)) ;
+}
+@keyframes animate {
+  0%{
+    transform: translateY(0px);
+  }
+  20%{
+    transform: translateY(-20px);
+  }
+  40%,100%{
+    transform: translateY(-40px);
+  }
+}
+
+    
+

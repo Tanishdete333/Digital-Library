@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="Library">
+    <h1
+      style="
+        margin: 1%;
+        font-size: 81px;
+        text-align: center;
+        color: rgb(31, 25, 25);
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Fantasy;
+      "
+    >
+      LIBRARY
+      
+    </h1>
+    
+    
+    <div class="Diamond">
+      <form id="Form1">
+      <h2 style="font-size: 35px;
+      color:aliceblue" class="h2__Login">Enter Details</h2>
+      <div class="God">
+      <div class="Username">
+        <input type="text" placeholder="Username"  name="Username"/>
+        <i class="bx bxs-user"></i><br /><br />
+      </div>
+      <div class="password">
+        <input type="Password" placeholder="Password" id=""  name="Pasword"/>
+        <i class="bx bxs-lock"></i>
+      </div>
+      <br />
+
+      <div style="color:white;">
+        <label> <input type="Checkbox" name="CheckBox"  />Remember me </label>
+        <a href="/">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="login__btn">Login</button><br />
+      <p style="color: white;">
+        Don't have an account?
+        <a href="Register.html">Register</a>
+        </div>
+        </form>
+      </p>
+    </div>
+     <div class="video">
+<video class="video" autoplay muted loop>
+        <source src="204243-923909579_large.mp4" type="video/mp4">
+
+ 
+
+
+<script>
+   let form = document.getElementById("form1");
+   form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let obj = { Username  : form.Username.value,
+          Password:form.Password.value,
+          CheckBox:form.CheckBox.value,
+        };
+        allstudent.push(obj);
+      });    
+</script>
+
+
+
+    </video>
+    </div>
+  </body>
+</html>

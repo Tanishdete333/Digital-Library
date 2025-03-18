@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav class="navbar">
+      <div class="nav_conatiner">
+        
+        <div class="navbar__logo" id="mobile_menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__items">  
+            <a href="indexlibrary.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__items">
+            <a href="Library1.html" class="navbar__links"> Books Collection</a>
+          </li>
+          
+          <li class="navbar__items">
+            <a href="addbokks.html" class="navbar__links">Add & Publish Books</a>
+          </li>
+          
+          <li class="navbar__btn">
+            <a href="Login.html" class="Login">Login</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+   
+
+
+
+
+
+
+    <div class="video">
+    <video class="video" autoplay muted loop>
+        <source src="204243-923909579_large.mp4" type="video/mp4">
+   
+</div>
+ <div class="main-container">
+     <h1>Library</h1>
+</div>
+<!-- 
+<button id="openModalBtn" class="alignment">Add Book </button>
+<button id="openModalBtn2" class="alignment2"> Publish Book</button>         
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+<span id="closeModalBtn" class="close">&times;</span>
+            <h2>Add Book</h2>
+            <form id="Form1">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" name="bookName" required>
+                <br>
+                <label for="bookLink">Google Drive Link:</label>
+                <input type="url" id="bookLink" name="bookLink" required>
+                <br>
+                <button type="submit">Save Book</button><br>
+                
+            </form>
+            </div>
+
+            
+            <div id="modal2" class="modal2">
+              <div class="modal-content2"> 
+                  <span id="closeModalBtn2" class="close">&times;</span>
+           <h3>Publish Book</h3>
+           <form id="Form2">
+           <label for="Author Name">Author Name</label>
+           <input type="text" id="AuthorName" name="Author Name" required><br>
+           <label for="Published">Published Date </label>
+           <input type="text" id="PublishedDate" name="Published Date" required><br>
+           <label for="bookName">Book Name:</label>
+                          <input type="text" id="bookName" name="bookName" required>
+                          <br>
+                          <label for="bookLink">Google Drive Link:</label>
+                          <input type="url" id="bookLink" name="bookLink" required><br>
+                          
+                           <button type="submit">Save Book</button><br>
+                        </div>
+                    </div>
+                </form> -->
+          
+ 
+                
+
+
+
+
+                
+    <button id="addBookBtn" class="Button1" >Add Book</button>
+    <button id="publishBookBtn" class="Button2">Publish Book</button>
+
+    <!-- Add Book Modal -->
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAddBook">&times;</span>
+            <h2>Add Book</h2>
+            <input type="text" id="bookName" placeholder="Book Name">
+            <input type="text" id="googleDriveLink" placeholder="Google Drive Link">
+            <button id="saveBook">Save Book</button>
+        </div>
+    </div>
+
+    <!-- Publish Book Modal -->
+    <div id="publishBookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePublishBook">&times;</span>
+            <h2>Publish Book</h2>
+            <input type="text" id="publishBookName" placeholder="Book Name">
+            <input type="text" id="publishAuthorName" placeholder="Author Name">
+            <input type="date" id="publishDate">
+            <input type="text" id="publishGoogleDriveLink" placeholder="Google Drive Link">
+            <button id="publishBook">Publish Book</button>
+        </div>
+    </div>
+
+    <div id="bookList" class="Booklist">
+        <h2>Book List</h2>
+        <ul id="bookItems"></ul>
+    </div>
+
+    <div id="publishedBooks" class="Publish">
+        <h2>Published Books</h2>
+        <ul id="publishedBooksList"></ul>
+    </div>
+
+    <script src="Project.js"></script>
+    
+</body>
+</html>
